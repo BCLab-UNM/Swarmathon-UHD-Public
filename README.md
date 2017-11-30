@@ -85,12 +85,14 @@ Joystick commands can also be simulated using the direction keys (Up=I, Down=K, 
 sudo apt install git
 ```
 
-##### 5. Install SwarmBaseCode-ROS
+##### 5. Install Swarmathon-UHD
 
 1a. To update your existing repository using the base code (your competition repository name will have been provided to you):
 
 ```
-cd YourRepositoryName
+git clone https://github.com/BCLab-UNM/Swarmathon-UHD.git
+cd Swarmathon-UHD
+Optional:
 git remote add SwarmBaseCode https://github.com/BCLab-UNM/SwarmBaseCode-ROS
 git pull SwarmBaseCode
 ```
@@ -514,3 +516,33 @@ controller that is configured using the `PIDConfig` struct. This
 struct is used to set the gains and the anti-windup parameters of the
 PID. The PID parameters can be tuned by modifying the config structs
 in the drive controller.
+
+### CONTRIBUTION GUIDELINES
+
+If you are unfamiliar with Git and/or GitHub:
+
+1) https://try.github.io/levels/1/challenges/1
+
+2) https://learngitbranching.js.org
+
+3) https://git-scm.com/book/en/v2
+
+Follow the guidelines in this useful blog post: https://hackernoon.com/my-approach-to-using-git-without-the-headaches-6926df5af0c7
+
+A simple workflow can be:
+
+1) Identify a small issue.
+
+2) Create a local branch to work on that small issue. The branch should have a name that identifies what the update/fix is about. ``` git branch branch-name``` & ```git checkout branch-name```
+
+3) Make as few as commits to as few files as possible per branch. ```git add``` & ```git commit```
+
+4) ALWAYS BE TESTING YOUR CHANGES
+
+5) Push local changes to remote origin. ```git push -u origin <branch>```
+
+6) Create a pull request on GitHub
+
+7) Read comments and reviews.
+
+8) Make fixes. Once PR has been merged, delete branch. 
